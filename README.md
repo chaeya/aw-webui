@@ -1,3 +1,13 @@
+# aw-webui-ko
+
+aw-webui 한국어 페이지 버전
+
+이 프로젝트는 아래 프로젝트의 서브모듈로 포함되어 사용됩니다.
+
+ * https://github.com/ActivityWatch/aw-server/tree/4e07cd1a2ae3c5138781d4615d6afcf2bcf8f9fb
+ * https://github.com/ActivityWatch/activitywatch
+
+
 # aw-webui
 
 A web-based UI for ActivityWatch, built with Vue.js
