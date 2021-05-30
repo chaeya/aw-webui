@@ -3,69 +3,42 @@ div
   b-alert(v-if="$isAndroid" show)
     | #[b Note:] ActivityWatch on Android is in a very early stage of development. There will be bugs, but we hope you bear with us as we refine things and get it on par with the desktop version of ActivityWatch (which you should try!).
 
-  h3 Hello early user,
+  h3 시스템 및 프로그램 이용시간 분석
   p
-    | It's still early days for ActivityWatch #[span(v-if="$isAndroid") (especially on Android!)]. We've come a long way but we need users (like you!)
-    | to provide feedback and help us turn ActivityWatch into a successful project.
-    | Early users like you mean a lot to us, and we hope you'll reach out to us with any ideas you have for improvements!
+    | 이 프로그램은 사용자가 어떤 프로그램을 얼마나 사용하는지, 어떤 유형의 작업을 얼마나 
+    | 소요 하는지, 어떤 웹사이트를 얼마나 사용하는지 등의 정보를 제공합니다.
+    | 이 보고서를 통해 자신의 프로그램 및 시스템 사용을 분석할 수 있습니다.
   p
-    | If you are a developer, we hope you can contribute by writing a watcher, visualization, or something else, and share it with us on the forum!
+    | 만약 다른 시스템에서 수집된 데이터를 분석하고 싶은 경우에는 상단의 Raw Data  
+    | 메뉴를 이용해서 데이터 내보내기와 가져오기를 사용하세요.
   p
-    div Thank you for using ActivityWatch!
-    small If you have a minute to spare, please take the time to fill out our #[a(href="https://forms.gle/q2N9K5RoERBV8kqPA") user survey] or #[a(href="https://forum.activitywatch.net/c/features") vote on features on the forum].
+    div 커뮤니티
+    small 사용중 궁금한 점이 있으시면 #[a(href="https://hamonikr.org/") 하모니카 커뮤니티] 또는 #[a(href="https://github.com/hamonikr/hamonikr-activitywatch/issues") 깃허브]를 방문하세요.
 
   hr
 
   div.row
     div.col-md-6
-      h4 Spread the word
-      p
-        | Nothing is as motivating as getting ActivityWatch into the hands of users.
-        | By sharing it you get us to make ActivityWatch even better!
-      ul
-        li Give us a like and a review on #[a(href="https://alternativeto.net/software/activitywatch/") AlternativeTo]
-        li Vote on us at #[a(href="https://www.producthunt.com/posts/activitywatch") ProductHunt]
-        li Follow us and spread the word on #[a(href="https://twitter.com/ActivityWatchIt") Twitter] and #[a(href="https://www.facebook.com/ActivityWatch") Facebook]
-        li Star us on #[a(href="https://github.com/ActivityWatch/activitywatch") GitHub]
-
-    div.col-md-6
-      h4 Support us!
-      p
-        | Do you like ActivityWatch? Has it helped you? Help us help you by donating!
-        | You can donate to us via:
-      ul
-        li #[a(href="https://www.patreon.com/erikbjare") Patreon]
-        li #[a(href="https://opencollective.com/activitywatch") Open Collective]
-        li #[a(href="https://liberapay.com/ActivityWatch/") Liberapay]
-        li #[a(href="https://activitywatch.net/donate/") Other methods] (incl. cryptocurrency)
-      p
-        | For more info, please visit the #[a(href="https://activitywatch.net/donate/") donation page on the website].
-
-  hr
-
-  div.row
-    div.col-md-6
-      h4 Resources
+      h4 관련 정보
       p
         ul
-          li #[a(href="https://activitywatch.net/") Website]
-          li #[a(href="https://activitywatch.readthedocs.org/") Documentation]
-          li #[a(href="https://forum.activitywatch.net/") Forum]
-          li #[a(href="https://discord.gg/vDskV9q") Discord]
-          li #[a(href="https://github.com/ActivityWatch/activitywatch") GitHub]
+          li #[a(href="https://hamonikr.org/") 커뮤니티]
+          li #[a(href="https://docs.hamonikr.org/hamonikr/") 도움말]
+          li #[a(href="https://hamonikr.slack.com/") 슬랙 채널]
+          li #[a(href="https://github.com/hamonikr/hamonikr-activitywatch/") GitHub]
           li #[a(href="/api/") API Browser]
 
     div.col-md-6
-      h4 Want to know what we're working on?
+      h4 더 많은 정보를 알고 싶다면 
       p
-        | Check out the #[a(href="https://forum.activitywatch.net/c/news") development updates]!
+        | #[a(href="https://hamonikr.org/") 하모니카 커뮤니티]를 방문하세요
 
   hr
 
   p
     small
       i
-        | You can change which page opens when you open ActivityWatch (instead of this page) in the #[router-link(to="/settings") settings].
+        | 프로그램 시작 페이지를 변경하고 싶은 경우에는 #[router-link(to="/settings") 설정]에서 변경하세요.
 
 </template>
 

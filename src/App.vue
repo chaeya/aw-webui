@@ -12,23 +12,13 @@ div#wrapper
   div.container(style="color: #555")
     div(style="float: left")
       div.mb-1
-        | Made with ❤ by the #[a(href="http://activitywatch.net/contributors/") ActivityWatch developers]
+        | About #[a(href="https://hamonikr.org/") HamoniKR]
       div
-        a.mr-2(href="https://github.com/ActivityWatch/activitywatch", target="_blank")
-          icon(name="brands/github")
-          | GitHub
-        a(href="https://twitter.com/ActivityWatchIt", target="_blank")
-          icon(name="brands/twitter")
-          | Twitter
 
     div(style="float: right; text-align: right;")
-      | Found a bug? #[a(href="https://github.com/ActivityWatch/activitywatch/issues/new/choose") File an issue]
+      | 버그를 발견하면 #[a(href="https://github.com/hamonikr/hamonikr-activitywatch/issues/new/choose") 깃허브]에서 이슈를 남겨주세요
       br
-      | Need help? #[a(href="https://forum.activitywatch.net/c/support") Ask on the forum]
-      br
-      | Missing a feature? #[a(href="https://forum.activitywatch.net/c/features") Vote on the forum]
-      br
-      | Built something cool? #[a(href="https://forum.activitywatch.net/c/projects") Share it on the forum]
+      | 도움이 필요하면 #[a(href="https://hamonikr.org/") 하모니카 커뮤니티]를 방문하세요
       br
       span.mt-2(v-show="info", style="color: #888; font-size: 0.8em")
         | Host: {{info.hostname}}
