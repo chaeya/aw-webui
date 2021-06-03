@@ -9,14 +9,14 @@ div
     table
       tr
         th.pr-2
-          label(for="mode") Interval mode:
+          label(for="mode") 모드 :
         td
           select(id="mode", v-model="mode")
-            option(value='last_duration') Last duration
-            option(value='range') Date range
+            option(value='last_duration') 최근 활동 보기
+            option(value='range') 기간별 보기
       tr(v-if="mode == 'last_duration'")
         th.pr-2
-          label(for="duration") Show last:
+          label(for="duration") 최근 활동 보기 단위 :
         td
           select(id="duration", v-model="duration", @change="valueChanged")
             option(:value="15*60") 15min
@@ -28,7 +28,7 @@ div
             option(:value="12*60*60") 12h
             option(:value="24*60*60") 24h
       tr(v-if="mode == 'range'")
-        th.pr-2 Range:
+        th.pr-2 기간 설정 :
         td
           input(type="date", v-model="start")
           input(type="date", v-model="end")
@@ -37,7 +37,7 @@ div
             type="button", 
             :disabled="mode == 'range' && (invalidDaterange || emptyDaterange || daterangeTooLong)",
             @click="valueChanged"
-          ) Update
+          ) 업데이트
 
 </template>
 

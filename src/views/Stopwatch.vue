@@ -1,14 +1,14 @@
 <template lang="pug">
 div
-  h2 Stopwatch
+  h2 스톱워치
   p
-    | Using bucket: {{bucket_id}}
+    | 대상 데이터베이스: {{bucket_id}}
 
   b-alert(show)
-    | This is an early experiment, an important missing feature is the ability to set start/end times manually.
+    | 이 기능은 아직 실험적입니다.
 
   b-input-group(size="lg")
-    b-input(v-model="label" placeholder="What are you working on?")
+    b-input(v-model="label" placeholder="무슨 일을 하고 있나요?")
     b-input-group-append
       b-button(@click="startTimer(label)", variant="success")
         icon(name="play")
@@ -19,17 +19,17 @@ div
   div.row
     div.col-md-12
       div(v-if="runningTimers.length > 0")
-        h3 Running
+        h3 작동 중
         div(v-for="e in runningTimers" :key="e.id")
           stopwatch-entry(:event="e", :bucket_id="bucket_id", :now="now",
             @delete="removeTimer", @update="updateTimer")
           hr(style="margin: 0")
       div(v-else)
-        span(style="color: #555") No stopwatch running
+        span(style="color: #555") 스톱워치가 동작하지 않습니다
         hr
 
       div(v-if="stoppedTimers.length > 0")
-        h3.mt-4.mb-4 History
+        h3.mt-4.mb-4 이전 기록
         div(v-for="k in Object.keys(timersByDate).sort().reverse()")
           h5.mt-2.mb-1 {{ k }}
           div(v-for="e in timersByDate[k]" :key="e.id")
@@ -37,7 +37,7 @@ div
               @delete="removeTimer", @update="updateTimer", @new="startTimer(e.data.label)")
             hr(style="margin: 0")
       div(v-else)
-        span(style="color: #555") No history to show
+        span(style="color: #555") 보여줄 이전 기록이 없습니다
         hr
 </template>
 

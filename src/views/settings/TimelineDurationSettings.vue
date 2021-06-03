@@ -2,7 +2,7 @@
 div
   div.d-sm-flex.justify-content-between
     div
-      h5.mb-2.mb-sm-0 Duration default value
+      h5.mb-2.mb-sm-0 타임라인 최근 단위
     div
       b-select(size="sm" :value="durationDefaultValue", @change="setDurationDefault($event.target.value)")
           option(:value="15*60") 15min
@@ -14,7 +14,7 @@ div
           option(:value="12*60*60") 12h
           option(:value="24*60*60") 24h
   small
-    | The default duration used for 'show last' in the timeline view.
+    | 타임 라인보기에서 '최근'에 사용되는 기본 기간.
 </template>
 <script>
 export default {

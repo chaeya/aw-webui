@@ -2,16 +2,16 @@
 div
   div.d-sm-flex.justify-content-between
     div
-      h5.mt-1.mb-2.mb-sm-0 Landing page
+      h5.mt-1.mb-2.mb-sm-0 시작 페이지
     div
       b-select.landingpage(v-if="loaded" size="sm" :value="landingpage", @change="set($event.target.value)")
         option(value="/home") Home
-        option(:value="'/activity/' + hostname + '/view/'" v-for="hostname in hostnames") Activity ({{hostname}})
-        option(value="/timeline") Timeline
+        option(:value="'/activity/' + hostname + '/view/'" v-for="hostname in hostnames") 보고서 ({{hostname}})
+        option(value="/timeline") 타임라인
       span(v-else)
-        | Loading...
+        | 로딩 중...
   small
-    | The page to open when opening ActivityWatch, or clicking the logo in the top menu.
+    | 프로그램 시작시 열리는 페이지를 설정할 수 있습니다.
 </template>
 <script>
 export default {

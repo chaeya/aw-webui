@@ -1,9 +1,9 @@
 <template lang="pug">
 div
-  h2 Buckets
+  h2 데이터베이스
 
   b-alert(show)
-    | Are you looking to collect more data? Check out #[a(href="https://activitywatch.readthedocs.io/en/latest/watchers.html") the docs] for more watchers.
+    | 더 많은 데이터를 수집하려고 하는 경우 #[a(href="https://activitywatch.readthedocs.io/en/latest/watchers.html") 이 문서]를 확인하세요.
 
   b-table(hover, small, :items="buckets", :fields="fields", responsive="md", sort-by="last_updated", :sort-desc="true")
     template(v-slot:cell(id)="data")
@@ -40,38 +40,38 @@ div
               | #[icon(name="trash")] Delete bucket
 
   b-modal(id="delete-modal", title="Danger!", centered, hide-footer)
-    | Are you sure you want to delete bucket "{{delete_bucket_selected}}"?
+    | 정말 "{{delete_bucket_selected}}" 데이터베이스를 삭제하시겠습니까?
     br
     br
-    b This is permanent and cannot be undone!
+    b 삭제된 데이터베이스는 복구할 수 없습니다!
     hr
     div.float-right
       b-button.mx-2(@click="$root.$emit('bv::hide::modal','delete-modal')")
-        | Cancel
+        | 취소
       b-button(@click="deleteBucket(delete_bucket_selected)", variant="danger")
-        | Confirm
+        | 확인
 
-  h3 Import and export buckets
+  h3 데이터베이스 가져오기 또는 내보내기
 
   b-card-group.deck
-    b-card(header="Import buckets")
+    b-card(header="데이터베이스 가져오기")
       b-alert(v-if="import_error" show variant="danger" dismissable)
         | {{ import_error }}
       b-form-file(v-model="import_file"
-                  placeholder="Choose a file or drop file here..."
-                  drop-placeholder="Drop file here...")
+                  placeholder="여기에 파일을 선택하거나 드래그앤드롭 하십시오..."
+                  drop-placeholder="여기에 드래그앤드롭 하십시오...")
       // TODO: This spinner could be placed in a more suitable place
       div(v-if="import_file" class="spinner-border" role="status")
       span
-        | A valid file to import is a JSON file from either an export of a single bucket or an export from multiple buckets.
-        | If there are buckets with the same name the import will fail
-    b-card(header="Export buckets")
+        | 가능한 파일은 단일 또는 여러 데이터베이스의 JSON 파일입니다.
+        | 이름이 같은 데이터베이스가 있는 경우 가져 오기가 실패합니다.
+    b-card(header="데이터베이스 내보내기")
       b-button(:href="$aw.baseURL + '/api/0/export'",
                :download="'aw-bucket-export.json'",
                title="Export bucket to JSON",
                variant="outline-secondary")
         icon(name="download")
-        | Export all buckets as JSON
+        | JSON으로 모든 데이터베이스 내보내기
 
 </template>
 

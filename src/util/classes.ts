@@ -33,7 +33,10 @@ export const defaultCategories: Category[] = [
   },
   {
     name: ['Work', 'Programming'],
-    rule: { type: 'regex', regex: 'GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|code|Visual Studio Code' },
+    rule: {
+      type: 'regex',
+      regex: 'GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|code|Visual Studio Code',
+    },
   },
   {
     name: ['Work', 'Programming', 'ActivityWatch'],
@@ -49,10 +52,16 @@ export const defaultCategories: Category[] = [
     name: ['Media', 'Social Media'],
     rule: { type: 'regex', regex: 'reddit|Facebook|Twitter|Instagram|devRant', ignore_case: true },
   },
-  { name: ['Media', 'Music'], rule: { type: 'regex', regex: 'Lollypop|리듬박스|Spotify|Deezer', ignore_case: true } },
+  {
+    name: ['Media', 'Music'],
+    rule: { type: 'regex', regex: 'Lollypop|리듬박스|Spotify|Deezer', ignore_case: true },
+  },
   {
     name: ['Comms', 'IM'],
-    rule: { type: 'regex', regex: 'Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Discord|KakaoTalk|카카오톡' },
+    rule: {
+      type: 'regex',
+      regex: 'Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Discord|KakaoTalk|카카오톡',
+    },
   },
   { name: ['Comms', 'Email'], rule: { type: 'regex', regex: 'Gmail|Thunderbird|mutt|alpine' } },
   { name: ['Uncategorized'], rule: { type: null }, data: { color: COLOR_UNCAT } },

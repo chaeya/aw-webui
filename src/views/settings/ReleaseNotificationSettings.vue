@@ -2,11 +2,11 @@
 div
   div.d-flex.justify-content-between
     div
-      h5.mb-0 New release notification
+      h5.mb-0 새 버전 알림
     div
       b-form-checkbox(v-model="data.isEnabled" switch)
   small
-    | We will send you a notification if there is a new release available for download, this check will happen at most once per day.
+    | 다운로드 할 수있는 새로운 릴리스가있는 경우 알림. 하루에 한 번 확인.
 </template>
 
 <script>

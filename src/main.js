@@ -1,5 +1,4 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import '@babel/polyfill';
 
 import Vue from 'vue';
 
@@ -20,6 +19,9 @@ if (!('startOfDay' in localStorage)) {
 
 // Load the Varela Round font
 import 'typeface-varela-round';
+
+// Load the Noto Sans font
+import 'typeface-noto-sans-kr';
 
 import './style/style.scss';
 

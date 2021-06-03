@@ -80,6 +80,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.10.4",
     "@egjs/hammerjs": "^2.0.17",
     "@fullcalendar/timegrid": "^5.1.0",
     "@fullcalendar/vue": "^5.1.0",
@@ -113,20 +114,20 @@
     "propagating-hammerjs": "^1.4.7",
     "sass": "^1.29.0",
     "style-loader": "^0.21.0",
+    "typeface-noto-sans-kr": "^1.1.13",
     "typeface-varela-round": "0.0.54",
     "uuid": "^7.0.3",
-    "vis-data": "^7.1.2",
+    "vis-data": "^6.6.1",
     "vis-timeline": "^7.3.7",
-    "vis-util": "^5.0.2",
+    "vis-util": "^4.3.2",
     "vue-awesome": "^3.5.1",
     "vue-chartjs": "^3.5.0",
     "vue-color": "^2.8.1",
-    "vue-d3-sunburst": "^1.2.0",
+    "vue-d3-sunburst": "^1.1.0",
     "vue-datetime": "^1.0.0-beta.13",
     "vue-property-decorator": "^8.5.1",
     "vuedraggable": "^2.24.3",
     "vuex": "^3.5.1",
-    "weekstart": "^1.0.1",
-    "xss": "^1.0.8"
+    "weekstart": "^1.0.1"
   }
 }

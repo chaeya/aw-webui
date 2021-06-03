@@ -1,13 +1,13 @@
 <template lang="pug">
 div
-  h2 Timeline
+  h2 타임라인
 
   input-timeinterval(v-model="daterange", :defaultDuration="timeintervalDefaultDuration", :maxDuration="maxDuration")
 
   div(v-show="buckets !== null")
     div
       div(style="float: left")
-        | Events shown:  {{ num_events }}
+        | 보여질 이벤트 수 :  {{ num_events }}
       div(style="float: right; color: #999")
         | Drag to pan and scroll to zoom.
     div(style="clear: both")
@@ -16,7 +16,7 @@ div
     aw-devonly(reason="Not ready for production, still experimenting")
       aw-calendar(:buckets="buckets")
   div(v-show="!(buckets !== null && num_events)")
-    h1 Loading...
+    h1 로딩 중...
 </template>
 
 <script>

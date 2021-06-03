@@ -153,14 +153,7 @@ const browser_appnames = {
     'Microsoft Edge', // macOS
   ],
   vivaldi: ['Vivaldi-stable', 'Vivaldi-snapshot', 'vivaldi.exe'],
-  whale: [
-    'naver-whale-stable', 
-    'naver-whale',
-    'Whale',    
-    'whale',
-    'Naver-Whale',    
-    'whale.exe'
-  ],  
+  whale: ['naver-whale-stable', 'naver-whale', 'Whale', 'whale', 'Naver-Whale', 'whale.exe'],
 };
 
 // Returns a list of (browserName, bucketId) pairs for found browser buckets

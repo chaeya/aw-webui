@@ -1,29 +1,29 @@
 <template lang="pug">
 div
   h5.d-inline-block
-    div Categorization
+    div 카테고리 설정
   div.float-right
     b-btn.ml-1(@click="restoreDefaultClasses", variant="outline-warning" size="sm")
       icon(name="undo")
-      | Restore defaults
+      | 초기화
     label.btn.btn-sm.ml-1.btn-outline-primary(style="margin: 0")
-      | Import
+      | 가져오기
       input(type="file" @change="importCategories" hidden)
     b-btn.ml-1(@click="exportClasses", variant="outline-primary" size="sm")
-      | Export
+      | 내보내기
   p
-    | Rules for categorizing events. An event can only have one category. If several categories match, the deepest one will be chosen.
+    | 이벤트 분류를 위한 규칙. 이벤트는 하나의 분류만 가질 수 있습니다. 만약 몇 가지 뷴류가 일치하면 가장 많은 시간의 뷴류가 선택됩니다.
   p
-    | For help on how to write categorization rules, see #[a(href="https://docs.activitywatch.net/en/latest/features/categorization.html") the documentation].
+    | 분류 규칙을 작성하는 방법에 대한 도움이 필요하면 #[a(href="https://docs.activitywatch.net/en/latest/features/categorization.html") 이 문서]를 참고하세요.
 
   div.my-4
     b-alert(variant="warning" :show="classes_unsaved_changes")
-      | You have unsaved changes!
+      | 저장되지 않은 변경사항이 있습니다!
       div.float-right(style="margin-top: -0.15em; margin-right: -0.6em")
         b-btn.ml-2(@click="saveClasses", variant="success" size="sm")
-          | Save
+          | 저장하기
         b-btn.ml-2(@click="resetClasses", variant="warning" size="sm")
-          | Discard
+          | 되돌리기
     div(v-for="_class in classes_hierarchy")
       CategoryEditTree(:_class="_class")
 
@@ -31,9 +31,9 @@ div
     div.col-sm-12
       b-btn(@click="addClass")
         icon.mr-2(name="plus")
-        | Add category
+        | 분류 추가
       b-btn.float-right(@click="saveClasses", variant="success" :disabled="!classes_unsaved_changes")
-        | Save
+        | 저장
 </template>
 <script>
 import { mapState, mapGetters } from 'vuex';

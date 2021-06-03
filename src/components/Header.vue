@@ -15,18 +15,18 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
         b-nav-item(v-if="activityViews.length === 1", v-for="view in activityViews", :key="view.name", :to="view.pathUrl")
           div.px-2.px-lg-1
             icon(name="calendar-day")
-            | Activity
+            | 보고서
 
         // If multiple (or no) activity views are available
         b-nav-item-dropdown(v-if="activityViews.length !== 1")
           template(slot="button-content")
             div.d-inline.px-2.px-lg-1
               icon(name="calendar-day")
-              | Activity
+              | 보고서
           b-dropdown-item(v-if="activityViews.length <= 0", disabled)
-            | No activity reports available
+            | 데이터가 없습니다
             br
-            small Make sure you have both an AFK and window watcher running
+            small 어플리케이션 추적과 윈도우 추적이 동작중인지 확인하세요
           b-dropdown-item(v-for="view in activityViews", :key="view.name", :to="view.pathUrl")
             icon(:name="view.icon")
             | {{ view.name }}
@@ -34,12 +34,12 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
         b-nav-item(to="/timeline" style="font-color: #000;")
           div.px-2.px-lg-1
             icon(name="stream")
-            | Timeline
+            | 타임라인
 
         b-nav-item(to="/stopwatch")
           div.px-2.px-lg-1
             icon(name="stopwatch")
-            | Stopwatch
+            | 스톱워치
 
       // Brand on large screens (centered)
       b-navbar-nav.abs-center.d-none.d-lg-block
@@ -52,22 +52,22 @@ div(:class="{'fixed-top-padding': fixedTopMenu}")
           template(slot="button-content")
             div.d-inline.px-2.px-lg-1
               icon(name="tools")
-              | Tools
+              | 도구
           b-dropdown-item(to="/search")
             icon(name="search")
-            | Search
+            | 검색
           b-dropdown-item(to="/query")
             icon(name="code")
-            | Query
+            | 쿼리
 
         b-nav-item(to="/buckets")
           div.px-2.px-lg-1
             icon(name="database")
-            | Raw Data
+            | 데이터베이스
         b-nav-item(to="/settings")
           div.px-2.px-lg-1
             icon(name="cog")
-            | Settings
+            | 설정
 </template>
 
 <style lang="scss" scoped>

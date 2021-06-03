@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h3 Search
+  h3 검색
 
   b-alert(style="warning" show)
     | This feature is still in early development.
@@ -13,18 +13,18 @@ div
     b-input-group-append
       b-button(type="button", @click="search()" variant="success")
         icon(name="search")
-        | Search
+        | 검색
 
   div.d-flex.mt-1
     span.mr-auto.small(style="color: #666") Hostname: {{hostname}}
     b-button(size="sm", variant="outline-dark" style="border: 0" @click="show_options = !show_options")
       span(v-if="!show_options")
-        | #[icon(name="angle-double-down")] Show options
+        | #[icon(name="angle-double-down")] 옵션 보이기
       span(v-else)
-        | #[icon(name="angle-double-up")] Hide options
+        | #[icon(name="angle-double-up")] 옵션 숨기기
 
   div(v-if="show_options")
-    h4 Options
+    h4 옵션
     div Hostname
       select(v-model="hostname")
         option(v-for="hostname in Object.keys($store.getters['buckets/bucketsByHostname'])")
