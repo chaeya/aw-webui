@@ -24,55 +24,35 @@ const COLOR_UNCAT = '#CCC';
 
 // The default categories
 // Should be run through createMissingParents before being used in most cases.
+// 설정 기본값 변경
 export const defaultCategories: Category[] = [
   {
     name: ['Work'],
-    rule: { type: 'regex', regex: 'Google Docs|libreoffice|ReText' },
+    rule: { type: 'regex', regex: 'Google Docs|libreoffice|ReText|hwp|한글|hcl|한셀|한쇼|한워드' },
     data: { color: '#0F0' },
   },
   {
     name: ['Work', 'Programming'],
-    rule: {
-      type: 'regex',
-      regex: 'GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|Ghidra|Scite',
-    },
+    rule: { type: 'regex', regex: 'GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|code|Visual Studio Code' },
   },
   {
     name: ['Work', 'Programming', 'ActivityWatch'],
     rule: { type: 'regex', regex: 'ActivityWatch|aw-', ignore_case: true },
   },
-  { name: ['Work', 'Image'], rule: { type: 'regex', regex: 'Gimp|Inkscape' } },
-  { name: ['Work', 'Video'], rule: { type: 'regex', regex: 'Kdenlive' } },
-  { name: ['Work', 'Audio'], rule: { type: 'regex', regex: 'Audacity' } },
-  { name: ['Work', '3D'], rule: { type: 'regex', regex: 'Blender' } },
   {
     name: ['Media', 'Games'],
     rule: { type: 'regex', regex: 'Minecraft|RimWorld' },
     data: { color: '#0FF' },
   },
-  { name: ['Media', 'Video'], rule: { type: 'regex', regex: 'YouTube|Plex|VLC' } },
+  { name: ['Media', 'Video'], rule: { type: 'regex', regex: 'YouTube|Plex|VLC|Celluiod|Netflix' } },
   {
     name: ['Media', 'Social Media'],
-    rule: {
-      type: 'regex',
-      regex: 'reddit|Facebook|Twitter|Instagram|devRant',
-      ignore_case: true,
-    },
+    rule: { type: 'regex', regex: 'reddit|Facebook|Twitter|Instagram|devRant', ignore_case: true },
   },
-  {
-    name: ['Media', 'Music'],
-    rule: {
-      type: 'regex',
-      regex: 'Spotify|Deezer',
-      ignore_case: true,
-    },
-  },
+  { name: ['Media', 'Music'], rule: { type: 'regex', regex: 'Lollypop|리듬박스|Spotify|Deezer', ignore_case: true } },
   {
     name: ['Comms', 'IM'],
-    rule: {
-      type: 'regex',
-      regex: 'Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Discord|Nheko',
-    },
+    rule: { type: 'regex', regex: 'Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Discord|KakaoTalk|카카오톡' },
   },
   { name: ['Comms', 'Email'], rule: { type: 'regex', regex: 'Gmail|Thunderbird|mutt|alpine' } },
   { name: ['Uncategorized'], rule: { type: null }, data: { color: COLOR_UNCAT } },
