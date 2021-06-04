@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  h3.mb-0 Activity for {{ periodReadable }}
+  h3.mb-0 {{ periodReadable }} 보고서
 
   div.mb-2
     ul.list-group.list-group-horizontal-md.mb-3(style="font-size: 0.9em; opacity: 0.7")
@@ -32,7 +32,7 @@ div
         b-button.px-2(@click="refresh(true)", variant="outline-dark")
           icon(name="sync")
           span.d-none.d-md-inline
-            |  Refresh
+            |  새로고침
 
   aw-periodusage(:periodusage_arr="periodusage", @update="setDate")
 
@@ -60,7 +60,7 @@ div
 
   div
     hr
-    h5 Options
+    h5 옵션
 
     div.row
       div.col-lg-6

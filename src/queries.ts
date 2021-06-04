@@ -134,6 +134,7 @@ const browser_appnames = {
 
     // Brave (should this be merged with the brave entry?)
     'Brave-browser',
+
   ],
   firefox: [
     'Firefox',
@@ -153,7 +154,7 @@ const browser_appnames = {
     'Microsoft Edge', // macOS
   ],
   vivaldi: ['Vivaldi-stable', 'Vivaldi-snapshot', 'vivaldi.exe'],
-  whale: ['naver-whale-stable', 'naver-whale', 'Whale', 'whale', 'Naver-Whale', 'whale.exe'],
+  whale: ['Naver-whale', 'whale', 'naver-whale-stable', 'naver-whale', 'Whale', 'Naver-Whale', 'whale.exe']
 };
 
 // Returns a list of (browserName, bucketId) pairs for found browser buckets

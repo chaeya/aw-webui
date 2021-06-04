@@ -14,14 +14,14 @@ div
 
   div(v-if="!supports_period")
     b-alert.small.px-2.py-1(show variant="warning")
-      | This feature doesn't support the current time period.
+      | 이 기능은 현재 기간을 지원하지 않습니다.
 
   div(v-if="$store.state.activity.buckets.loaded")
     // Check data prerequisites
     div(v-if="!has_prerequisites")
       b-alert.small.px-2.py-1(show variant="warning")
-        | This feature is missing data from a required watcher.
-        | You can find a list of all watchers in #[a(href="https://activitywatch.readthedocs.io/en/latest/watchers.html") the documentation].
+        | 이 기능은 필요한 데이터가 누락되었습니다.
+        | 모든 추가 분석도구를 #[a(href="https://activitywatch.readthedocs.io/en/latest/watchers.html") 이 문서]에서 찾을 수 있습니다.
 
     div(v-if="type == 'top_apps'")
       aw-summary(:fields="$store.state.activity.window.top_apps",
@@ -152,53 +152,53 @@ export default {
     visualizations: function () {
       return {
         top_apps: {
-          title: 'Top Applications',
+          title: '자주 사용하는 프로그램',
           available:
             this.$store.state.activity.window.available ||
             this.$store.state.activity.android.available,
         },
         top_titles: {
-          title: 'Top Window Titles',
+          title: '작업창 제목',
           available: this.$store.state.activity.window.available,
         },
         top_domains: {
-          title: 'Top Browser Domains',
+          title: '자주 방문하는 사이트',
           available: this.$store.state.activity.browser.available,
         },
         top_urls: {
-          title: 'Top Browser URLs',
+          title: '자주 방문하는 URLs',
           available: this.$store.state.activity.browser.available,
         },
         top_editor_files: {
-          title: 'Top Editor Files',
+          title: '자주쓰는 편집기',
           available: this.$store.state.activity.editor.available,
         },
         top_editor_languages: {
-          title: 'Top Editor Languages',
+          title: '자주쓰는 개발도구',
           available: this.$store.state.activity.editor.available,
         },
         top_editor_projects: {
-          title: 'Top Editor Projects',
+          title: '자주 사용한 프로젝트',
           available: this.$store.state.activity.editor.available,
         },
         top_categories: {
-          title: 'Top Categories',
+          title: '활동 분류',
           available: this.$store.state.activity.category.available,
         },
         category_tree: {
-          title: 'Category Tree',
+          title: '활동 분류(트리형식)',
           available: this.$store.state.activity.category.available,
         },
         category_sunburst: {
-          title: 'Category Sunburst',
+          title: '활동 분류 그래프',
           available: this.$store.state.activity.category.available,
         },
         timeline_barchart: {
-          title: 'Timeline (barchart)',
+          title: '타임라인 (barchart)',
           available: true,
         },
         sunburst_clock: {
-          title: 'Sunburst clock',
+          title: '시간 그래프',
           available:
             this.$store.state.activity.window.available &&
             this.$store.state.activity.active.available,
@@ -268,7 +268,7 @@ export default {
         const data = split_by_hour_into_data(this.$store.state.activity.active.events);
         return [
           {
-            label: 'Total time',
+            label: '총 사용시간',
             backgroundColor: '#6699ff',
             data,
           },

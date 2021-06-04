@@ -15,6 +15,7 @@ build: install
 	npm run build ${androidflag}
 
 install:
+	npx browserslist@latest --update-db
 	npm ci
 
 uninstall:

@@ -58,13 +58,13 @@ div
       b-alert(v-if="import_error" show variant="danger" dismissable)
         | {{ import_error }}
       b-form-file(v-model="import_file"
-                  placeholder="여기에 파일을 선택하거나 드래그앤드롭 하십시오..."
-                  drop-placeholder="여기에 드래그앤드롭 하십시오...")
+                  placeholder="여기에 파일을 선택하거나 드롭 하십시오..."
+                  drop-placeholder="여기에 드롭 하십시오...")
       // TODO: This spinner could be placed in a more suitable place
       div(v-if="import_file" class="spinner-border" role="status")
       span
         | 가능한 파일은 단일 또는 여러 데이터베이스의 JSON 파일입니다.
-        | 이름이 같은 데이터베이스가 있는 경우 가져 오기가 실패합니다.
+        | 이름이 같은 데이터베이스가 있는 경우 가져오기를 실패합니다.
     b-card(header="데이터베이스 내보내기")
       b-button(:href="$aw.baseURL + '/api/0/export'",
                :download="'aw-bucket-export.json'",
